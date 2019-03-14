@@ -1,0 +1,88 @@
+.navbar-custom {
+    background-color: #EA8300 !important;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8)!important;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5) !important;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff!important;
+}
+
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+.side-card
+{
+    border:1px solid #EA8300 ;
+}
+
+.card-green
+{
+    background:#49B700;
+}
+
+.card-red
+{
+    background:#F61919;
+}
+
+.card-title{
+    color:white;
+}
+.card-text{
+    color:white;
+}
+.btn{
+    background-color: #EA8300;
+    box-shadow: 0px 8px 15px #C0C0C0;
+    border-radius:25px;
+    border:none;
+   
+}
+
+.btn:hover { 
+    background-color: rgb(209, 160, 96);
+    box-shadow: 0px 8px 15px #C0C0C0;
+    border:none;
+    
+  }
+
+.form-control{
+    box-shadow: 0px 8px 15px #C0C0C0;
+    border-radius: 25px;
+}
+
+.white-button
+{
+    background-color: white;
+    color:black;
+    border:1px solid black;
+}
+
+.black-button
+{
+    background-color:black;
+    color:white;
+}
+
+.card{
+    border-radius:25px;
+    box-shadow: 0px 8px 15px #C0C0C0;
+}
+
+.col-form-label {
+    font-family:  'Montserrat', sans-serif;
+font-weight:bold;
+font-size: 12px;
+}

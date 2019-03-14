@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TE CONNECTIVITY</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+  
+    <script>$(window).load(function(){
+        $('#onload').modal('show');
+    });</script>
+
+<script>var doc = new jsPDF();
+
+    $('#cmd').click(function () {   
+        doc.fromHTML($('#content').html(), 15, 15, {
+            'width': 170,
+                'elementHandlers': specialElementHandlers
+        });
+        doc.save('sample-file.pdf');
+    });
+  </script>
+  <script>
+    function myFunction() {
+  document.getElementById("myForm").reset();
+}
+  </script>
+  
+    
+</head>
+<body style="font-family: 'Montserrat', sans-serif;" >
+
+    
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"  id="onload" data-keyboard="false" data-backdrop="static">
+
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title"><i class="fa fa-exclamation-circle"></i>TE CONNECTIVITY </h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form id="myForm">
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-3 col-form-label">select week</label>
+                    <div class="col-sm-9">
+                    <select id="inputState" class="form-control">
+                        <option value="" disabled selected>Select Week</option>
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                        <option value="03">3</option>
+                        <option value="04">4</option>
+                        <option value="05">5</option>
+                        <option value="06">6</option>
+                        <option value="07">7</option>
+                        <option value="08">8</option>
+                        <option value="09">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                    </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                      <label for="inputEmail3" class="col-sm-3 col-form-label">Select Year</label>
+                      <div class="col-sm-9">
+                      <select id="inputState" class="form-control">
+                          <option value="" style="">Select Year</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+                         
+                      </select>
+                      </div>
+                    </div>
+                      <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">
+                            Order/SA #   </label>
+                        <div class="col-sm-9">
+                            <input id="order no" class="form-control" type="text" onblur="disableInputFields(this.id,this.value)" size="10" style="width:100%;" placeholder="Enter Order/SA#" />
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                          <label for="inputEmail3" class="col-sm-3 col-form-label">
+                              Order/SA Item#      </label>
+                          <div class="col-sm-9">
+                              <input id="order no" class="form-control" type="text" onblur="disableInputFields(this.id,this.value)" size="10" style="width:100%;" placeholder="Enter Order/SA Item #" />
+                          </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 col-form-label">
+                                Sold To   </label>
+                            <div class="col-sm-9">
+                                <input id="order no" class="form-control" type="text" onblur="disableInputFields(this.id,this.value)" size="10" style="width:100%;" placeholder="Sold to" />
+                            </div>
+                          </div>
+                        
+                          <div class="form-group row">
+                              <label for="inputEmail3" class="col-sm-3 col-form-label">
+                                  Ship To #    </label>
+                              <div class="col-sm-9">
+                                  <input id="order no" class="form-control" type="text" onblur="disableInputFields(this.id,this.value)" size="10" style="width:100%;" placeholder="Ship To # " />
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-3 col-form-label">
+                                  Material #    </label>
+                                <div class="col-sm-9">
+                                    <input id="order no" class="form-control" type="text" onblur="disableInputFields(this.id,this.value)" size="10" style="width:100%;" placeholder="Material # " />
+                                </div>
+                              </div>
+
+                
+                
+                
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary btn-block" data-dismiss="modal" >Submit</button>
+                    <button type="reset" class="btn btn-primary btn-block" onclick="myFunction()" value="Reset form" >Reset</button>
+                  </div>
+                </div>
+              </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div> -->
+      </div>
+
+    </div>
+</div>
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light navbar-custom">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png"  height="30" class="d-inline-block align-top" alt="">
+        </a>
+
+        <ul class="nav navbar-nav navbar-center">
+          <li><a href="#" style="color:white;"><strong>WELCOME TO THE LIABILITY TRACKER</strong></a></li>
+          
+      </ul>
+</nav>
+
+<div class="container-fluid mt-4" id="content">
+<div class="row">
+    <div class="col-md-4 mt-4 ">
+        <div class="card side-card h-100">
+            <div class="card-body">
+        <ul style="list-style-type:none;">
+          <li>
+              <span style="font-size: 1em; line-height: 21px;"><b>Week:</b></span>
+          </li>
+          <li>
+              <span style="font-size: 1em; line-height: 21px;"><b>Year:</b></span>
+          </li>
+            <li>
+                <span style="font-size: 1em; line-height: 21px;"><b>Order #:</b></span>
+                <span id="Ord_num_p" class="output_text" style="width:20px;display:inline;"></span>
+            </li>
+            <li>
+                <span style="font-size: 1em; line-height: 21px;"><b>Ship To #:</b></span>
+                <span id="Ship_to_num_p" class="output_text" style="width: 20px;display:inline;"></span>
+            </li>
+            <li>
+                <span style="font-size: 1em; line-height: 21px;"><b>Ship To Name:</b></span>
+                <span style="width:20px;display:inline;" id="Ship_to_name_p" class="output_text"></
+            </li>
+            <li>
+                <span style="font-size: 1em; line-height: 21px;"><b>Order Item #:</b></span>
+                <span style="width:20px;display:inline;" id="order_item_num_p" class="output_text"> </span>
+            </li>
+            <li>
+                <span style="font-size: 1em; line-height: 21px;"><b>Sold To #:</b></span>
+                <p id="sold_to_num_p" class="output_text" style="display:inline;"></p>
+            </li>
+            <li>
+                <span style="font-size: 1em; line-height: 21px;"><b>Sold To Name:</b></span>
+                <span style="width:20px;display:inline;" id="sold_to_name_p" class="output_text"></span>
+            </li>
+            <li>
+                <span style="font-size: 1em; line-height: 21px;"><b>Sales Org:</b></span>
+                <span style="width:20px;display:inline;" id="Sales_org_p" class="output_text"></span>
+            </li>
+            <li>
+                <span style="font-size: 1em; line-height: 21px;"><b>World Wide #:</b></span>
+                <span style="width:20px;display:inline;" id="wwnum_p" class="output_text"></span>
+            </li>
+            <li>
+                <span style="font-size: 1em; line-height: 21px;"><b>World Wide Name:</b></span>
+					      <span style="width:20px;display:inline;" id="wwname_p" class="output_text"></span>
+            </li>
+            <li>
+                <span style="font-size: 1em; line-height: 21px;"><b>Material #:</b></span>
+					      <span style="width:20px;display:inline;" id="mat_num_p" class="output_text"></span>
+            </li>
+          </ul>
+    </div>
+    </div>
+  </div>
+    <div class="col-md-8">
+      
+      <div class="row">
+        <div class="col-md-4 mt-4">
+            <div class="card text-center card-green">
+                <div class="card-body">
+                    <p class="card-text">Long Term Flexibility</p>
+                  <h5 class="card-title">Established</h5>
+                  
+                  
+                </div>
+              </div>
+          </div>
+        
+        <div class="col-md-4 mt-4">
+            <div class="card text-center card-red">
+                <div class="card-body">
+                    <p class="card-text">Short Term Flexibility</p>
+                  <h5 class="card-title">Not Established</h5>
+                  
+                  
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 mt-4">
+            <div class="card text-center card-red">
+                <div class="card-body">
+                    <p class="card-text">Saftey Stock</p>
+                  <h5 class="card-title">Not Established</h5>
+                  
+                 
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 mt-4">
+            <div class="card text-center card-green">
+                <div class="card-body">
+                    <p class="card-text">Long Term Forecast</p>
+                  <h5 class="card-title">Deviated</h5>
+                  
+                  
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 mt-4">
+            <div class="card text-center card-red">
+                <div class="card-body">
+                    <p class="card-text">Short Term Forecast</p>
+                  <h5 class="card-title">Deviated</h5>
+                  
+                  
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 mt-4">
+            <div class="card text-center card-red" >
+                <div class="card-body">
+                    <p class="card-text">Final Decision</p>
+                  <h5 class="card-title">Liable</h5>
+                  
+                 
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 mt-4">
+            <div class="card text-center card-red">
+                <div class="card-body">
+                    <p class="card-text">Contract Type</p>
+                  <h5 class="card-title">Make To Stock</h5>
+                  
+                  
+                </div>
+              </div>
+        </div>
+        <div class="col-md-8 mt-4">
+            <div class="card" >
+                <div class="card-body">
+                  <table>
+                  <tr>
+                    <td>
+                  <img src="img/logo.png" class="img-fluid"  style="height:60px;" >
+                  </td>
+                  <td class="pl-4">
+                  <span  ><p><strong>Final Decision</strong></p></span>
+                  <span ><h5><strong>TE Liable</strong></h5></span>
+                  </td>
+                  </tr>
+                </table>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 mt-4">
+            <button type="submit" class="btn btn-primary btn-block white-button" data-dismiss="modal" >Order Summary </button>
+        </div>
+        <div class="col-md-6 mt-4">
+            <button type="submit" class="btn btn-primary btn-block" data-dismiss="modal" id="cmd" >Generate PDF</button>
+          </div>
+
+          <div class="col-md-12 mt-3">
+              <button type="submit" class="btn btn-primary btn-block black-button" data-toggle="modal" data-target="#onload" >New Search</button>
+          </div>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div>
+
+
+
+
+
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
