@@ -61,6 +61,10 @@
 .form-control{
     box-shadow: 0px 8px 15px #C0C0C0;
     border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
 }
 
 .white-button
