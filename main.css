@@ -84,5 +84,19 @@
 .col-form-label {
     font-family:  'Montserrat', sans-serif;
 font-weight:bold;
-font-size: 12px;
+font-size: 1rem;
+}
+
+
+
+@media screen and (min-width: 992px) {
+    .modal-lg{
+        max-width: 50%!important;
+    }
+  }
+  
+  
+
+.modal-content{
+    border-radius: 25px;
 }
