@@ -104,3 +104,8 @@ font-size: 1rem;
 .modal-content{
     border-radius: 25px;
 }
+
+.modal-dialog
+{
+    top:26px;
+}
