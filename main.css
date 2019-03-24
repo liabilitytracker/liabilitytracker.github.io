@@ -22,20 +22,7 @@
     left: 50%;
     transform: translatex(-50%);
 }
-.side-card
-{
-    /* border:1px solid #EA8300 ; */
-}
 
-/* .card-green
-{
-    background:#49B700;
-}
-
-.card-red
-{
-    background:#F61919;
-} */
 
 .card-title{
     color:white;
@@ -272,4 +259,3 @@ font-size: 1rem;
     opacity:0.9 !important;
     color:white;
 }
-.
