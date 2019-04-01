@@ -56,7 +56,7 @@
             <div class="form-row">
                 <label for="inputEmail3" class="col-sm-3 col-form-label">select week</label>
                 <div class="col-sm-9">
-                <select id="inputState" class="form-control" class="form-control" id="validationCustom02" placeholder="Order/SA Item#"  required>
+                <select id="week" class="form-control"   placeholder="Order/SA Item#"  required>
                     <option value="" disabled selected>Select Week</option>
                     <option value="01">1</option>
                     <option value="02">2</option>
@@ -115,7 +115,7 @@
 
                 <label for="inputEmail3" class="col-sm-3 col-form-label mt-4">Select Year</label>
                       <div class="col-sm-9 mt-4 ">
-                      <select id="inputState" class="form-control" class="form-control" id="validationCustom02" placeholder="Order/SA Item#"  required>
+                      <select class="form-control" class="form-control" id="year" placeholder="Order/SA Item#"  required>
                           <option value="" style="">Select Year</option>
 					<option value="2017">2017</option>
 					<option value="2018">2018</option>
@@ -126,33 +126,34 @@
                       <label for="validationCustom01" class="col-sm-3 col-form-label mt-4">Order/SA #</label>
               <div class="col-sm-9 mt-4 ">
                 
-                <input type="text" class="form-control" id="validationCustom01" placeholder="Order/SA #"  required>
+                  <input type="text" class="input_text form-control" name="validationCustom01" id="order no" placeholder="Order/SA #" onkeyup="disableField()"/ required>
+                </label>
                 
               </div>
 
               <label for="validationCustom02" class="col-sm-3 col-form-label mt-4">Order/SA Item# </label>
               <div class="col-sm-9 mt-4">
                 
-                <input type="text" class="form-control" id="validationCustom02" placeholder="Order/SA Item#"  required>
+                  <input type="text" class="input_text form-control" name="validationCustom02" id="order item no" placeholder="Order/SA Item#" onkeyup="disableField1()" required >
                 
               </div>
 
               <label for="validationCustom02" class="col-sm-3 col-form-label mt-4">Sold To</label>
               <div class="col-sm-9 mt-4">
                 
-                <input type="text" class="form-control" id="validationCustom02" placeholder="Sold To"  required>
+                <input type="text" class="input_text form-control" name="validationCustom03" id="sold to no" placeholder="Sold To" onkeyup="disableField2()" required>
                 
               </div>
               <label for="validationCustom02" class="col-sm-3 col-form-label mt-4">Ship To #</label>
               <div class="col-sm-9 mt-4">
                 
-                <input type="text" class="form-control" id="validationCustom02" placeholder="Ship To #"  required>
+                <input type="text" class="input_text form-control" name="validationCustom04" id="ship to no" placeholder="Ship To #" onkeyup="disableField3()" required>
                 
               </div>
               <label for="validationCustom02" class="col-sm-3 col-form-label mt-4">Material #</label>
               <div class="col-sm-9 mt-4">
                 
-                <input type="text" class="form-control" id="validationCustom02" placeholder="Material #"  required>
+                <input type="text" class="input_text form-control" name="validationCustom05" id="material no" placeholder="Material #" onkeyup="disableField4()" required>
                 
               </div>
 
@@ -368,15 +369,51 @@
     
   </div>
   </div>
-
-  <script>
-    function relocate_home()
-    {
-         location.href = "front.html";
-    } 
-    </script>
+ 
 
 
+ 
+
+<script>
+    
+    var disableField = function () {
+  var state = document.getElementById("order no").value.length > 0;
+  document.getElementById("sold to no").disabled = state;
+  document.getElementById("ship to no").disabled = state;
+  document.getElementById("material no").disabled = state;
+};
+
+var disableField1 = function () {
+  var state = document.getElementById("order item no").value.length > 0;
+  document.getElementById("sold to no").disabled = state;
+  document.getElementById("ship to no").disabled = state;
+  document.getElementById("material no").disabled = state;
+};
+
+var disableField2 = function () {
+  var state = document.getElementById("sold to no").value.length > 0;
+  document.getElementById("order no").disabled = state;
+  document.getElementById("order item no").disabled = state;
+  document.getElementById("ship to no").disabled = state;
+};
+
+var disableField3 = function () {
+  var state = document.getElementById("ship to no").value.length > 0;
+  document.getElementById("order no").disabled = state;
+  document.getElementById("order item no").disabled = state;
+  document.getElementById("sold to no").disabled = state;
+};
+
+var disableField4 = function () {
+  var state = document.getElementById("material no").value.length > 0;
+  document.getElementById("order no").disabled = state;
+  document.getElementById("order item no").disabled = state;
+ };
+
+
+
+
+</script>
 
   <script>$(window).load(function(){
     $('#onload').modal('show');
